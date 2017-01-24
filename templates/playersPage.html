@@ -1,0 +1,33 @@
+<div class = "container-fluid" ng-controller = "playerController">
+  <b id = "filterHeading">Filter By Role:</b>
+  <select  id = "filter"  ng-model = "globalSearch.player_role">
+    <option value="All-rounder">All Rounder</option>
+    <option value="Batsman">Batsman</option>
+    <option value="Bowler">Bowler</option>
+    <option value="">All Players</option>
+  </select>
+  <div class="row">
+    <div class="col-sm-4" "col-lg-3" "col-xs-4"  ng-repeat = "player in players | filter : globalSearch ">
+      <img id = "playerImg"src="{{player.player_img_url}}" alt="Player" style="background-image : url('{{backgroundImage}}')"><br>
+      <button type="button" id = "playerBtn" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal{{$index}}">Player Details</button>
+
+      <div class="modal fade" id="myModal{{$index}}" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3><b>Player Details</b></h3>
+            <span><b>Player Name: </b></span>{{player.player_name}}<br>
+            <span><b>Player Role: </b></span>{{player.player_role}}<br>
+            <span><b>Player Batting Style: </b></span>{{player.player_batting_style}}</br>
+            <span><b>Player Bowling Style: </b></span>{{player.player_bowling_style}}<br>
+            <span><b>Player Nationality: </b></span>{{player.player_nationality}}<br>
+            <span><b>Player Dob: </b></span>{{player.player_dob}}<br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

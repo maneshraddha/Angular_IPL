@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div  ng-controller = "teamController" id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="team in teams" active="team.active">
+          <a href = "#/teams/{{team.id}}">
+            <img id = "teamId" ng-src="{{team.team_img_url}}">
+          </a>
+          <div class="dropup">
+            <button class="btn btn-info btn-lg dropdown-toggle" type="button" data-toggle="dropdown">Team Details<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><b>Team Name: </b>{{team.team_name}}</li>
+              <li><b>Team Coach:</b>{{team.team_coach}}</li>
+              <li><b>Team Captain:</b>{{team.team_captain}}</li>
+              <li><b>Team Home Venue:</b>{{team.team_home_venue}}</li>
+              <li><b>Team Owner:</b>{{team.team_owner}}</li>
+            </ul>
+        </div>
+          <h3 id = "teamName"><b>{{team.team_name}}</b></h3>
+        </slide>
+      </carousel>
+    </div>
+  <br>
+  </div>
+</div>

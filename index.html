@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Indian Premiur League</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+		<link href="assets/css/styles.css" rel="stylesheet">
+
+    <!-- Bootstrap css Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Bootstrap Links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Angular Links -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <script src = "config.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+  </head>
+  <body >
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="nav navbar-nav navbar-left">
+            <a href="#/teams"><img id = "ipl_logo" src="assets/images/IPL_logo.jpeg" alt="IPL_logo"></a>
+          </div>
+          <a class="navbar-brand" href="#/teams">Indian Premier league</a>
+        </div>
+        <div class="pull-right">
+        <a class="navbar-brand"  href="#/teams">Teams</a>
+      </div>
+    </nav>
+    <div ng-view></div>
+
+    <script src = "app.js"></script>
+  </body>
+  <script src = "controllers/playerControl.js"></script>
+  <script src = "controllers/teamControl.js"></script>
+</html>
